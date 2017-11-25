@@ -3,11 +3,19 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+A: Naked twins are first detected along each unit in the grid. Naked twins are said to occur if there are two boxes in the
+same unit which have only two possible values to be filled in and they are equal. After detecting such naked twins, we can use
+constraint propagation to eliminate both the values from the list of possible values for all other boxes in the same unit.
+Since no other box apart from these two boxes in the same unit can have the possible values in the twins. Doing such eliminations
+based on naked twins will help make the algorithm run faster.
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: Applying constraint propagation to the diagonal variant of the sudoku problem is quite simple. All we need to do is add the proper constraints
+for both the main diagonals in the grid. The diagonal boxes A1...I9 and A9....I1 are both included as units along with row, column
+and subsquare units. The peers for any box along the main diagonals will include the diagonal boxes so that contraint propagation
+is done including the diagonal units as well. Elimination will be done for such diagonal boxes taking these diagonal peers
+into consideration.
 
 ### Install
 
